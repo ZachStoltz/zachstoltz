@@ -8,5 +8,5 @@
     var vm = this;
 
     vm.title = "Welcome";
-  });
+  }
 })();
