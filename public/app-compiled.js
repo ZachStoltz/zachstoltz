@@ -48,6 +48,8 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
+	var Nav = __webpack_require__(159);
+	var About = __webpack_require__(160);
 
 	var Main = React.createClass({
 	  displayName: 'Main',
@@ -56,7 +58,8 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      'Testing'
+	      React.createElement(Nav, null),
+	      React.createElement(About, null)
 	    );
 	  }
 	});
@@ -19641,6 +19644,201 @@
 	'use strict';
 
 	module.exports = __webpack_require__(3);
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var SideNavButton = __webpack_require__(162);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'nav',
+	      null,
+	      React.createElement(
+	        'div',
+	        { className: 'nav-wrapper' },
+	        React.createElement(SideNavButton, null),
+	        React.createElement(
+	          'ul',
+	          { className: 'right hide-on-med-and-down' },
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              { href: '#' },
+	              'Home'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              { href: '#' },
+	              'About'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              { href: '#' },
+	              'Projects'
+	            )
+	          )
+	        ),
+	        React.createElement(
+	          'ul',
+	          { className: 'side-nav', id: 'mobile-nav' },
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              { href: '#' },
+	              'Home'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              { href: '#' },
+	              'About'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              'a',
+	              { href: '#' },
+	              'Projects'
+	            )
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var CircleImg = __webpack_require__(161);
+	var InfoBox = __webpack_require__(164);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(InfoBox, null)
+	    );
+	  }
+	});
+
+	// <CircleImg src="public/img/us.jpg"/>
+
+/***/ },
+/* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(158);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement('img', { src: this.props.src, className: 'responsive-img circle' });
+	  }
+	});
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var reactDOM = __webpack_require__(158);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  componentDidMount: function componentDidMount() {
+	    $(reactDOM.findDOMNode(this)).sideNav();
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'a',
+	      { href: '#', 'data-activates': 'mobile-nav', className: 'button-collapse' },
+	      React.createElement(
+	        'i',
+	        { className: 'material-icons' },
+	        'menu'
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 163 */,
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'p',
+	      { className: 'flow-text center-align' },
+	      React.createElement(
+	        'span',
+	        null,
+	        React.createElement(
+	          'i',
+	          { className: 'material-icons' },
+	          'stars'
+	        )
+	      ),
+	      'Work In Progress',
+	      React.createElement(
+	        'span',
+	        null,
+	        React.createElement(
+	          'i',
+	          { className: 'material-icons' },
+	          'stars'
+	        )
+	      )
+	    );
+	  }
+	});
 
 /***/ }
 /******/ ]);

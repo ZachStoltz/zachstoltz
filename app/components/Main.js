@@ -1,11 +1,14 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
+let Nav = require('./layout/Nav');
+let About = require('./About')
 
-var Main = React.createClass({
+let Main = React.createClass({
   render:function(){
     return(
       <div>
-        Testing
+        <Nav />
+        <About />
       </div>
     );
   }
