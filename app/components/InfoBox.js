@@ -1,13 +1,14 @@
-let React = require('react');
+import React from 'react';
 
-module.exports = React.createClass({
-  render: function(){
+class InfoBox extends React.Component{
+  render(){
     return(
       <p className='flow-text center-align'>
         <span><i className="material-icons">stars</i></span>
-          Work In Progress 
+          Work In Progress
         <span><i className="material-icons">stars</i></span>
       </p>
     );
   }
-});
+}
+export default InfoBox;

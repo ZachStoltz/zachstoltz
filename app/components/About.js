@@ -1,15 +1,15 @@
-let React = require('react');
-let CircleImg = require('./CircleImg');
-let InfoBox = require('./InfoBox');
+import React from 'react';
+//import CircleImg from './CircleImg';
+import InfoBox from './InfoBox';
 
-module.exports = React.createClass({
-  render: function(){
+class About extends React.Component{
+  render(){
     return (
       <div>
         <InfoBox />
       </div>
     );
   }
-});
-
+}
+export default About;
 // <CircleImg src="public/img/us.jpg"/>

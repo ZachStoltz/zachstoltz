@@ -1,10 +1,11 @@
-let React = require('react');
-let ReactDOM = require('react-dom');
-let Nav = require('./layout/Nav');
-let About = require('./About')
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Nav from './layout/Nav';
+import About from './About';
 
-let Main = React.createClass({
-  render:function(){
+
+class Main extends React.Component{
+  render(){
     return(
       <div>
         <Nav />
@@ -12,6 +13,6 @@ let Main = React.createClass({
       </div>
     );
   }
-});
+}
 
-ReactDOM.render(<Main />, document.body);
+ReactDOM.render(<Main />, document.getElementById('app'));

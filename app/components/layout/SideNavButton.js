@@ -1,15 +1,16 @@
-let React = require('react');
-let reactDOM = require('react-dom');
+import React from 'react';
+import reactDOM from 'react-dom';
 
-module.exports = React.createClass({
-  componentDidMount: function(){
+class SideNavButton extends React.Component{
+  componentDidMount(){
     $(reactDOM.findDOMNode(this)).sideNav();
-  },
-  render: function(){
+  }
+  render(){
     return(
       <a href="#" data-activates="mobile-nav" className="button-collapse">
         <i className="material-icons">menu</i>
       </a>
     );
   }
-});
+}
+export default SideNavButton;

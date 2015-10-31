@@ -1,8 +1,8 @@
-let React = require('react');
-let SideNavButton = require('./SideNavButton');
+import React from 'react';
+import SideNavButton from './SideNavButton';
 
-module.exports = React.createClass({
-  render: function(){
+class Nav extends React.Component{
+  render(){
     return(
       <nav>
         <div className="nav-wrapper">
@@ -21,4 +21,5 @@ module.exports = React.createClass({
       </nav>
     );
   }
-});
+}
+export default Nav;
