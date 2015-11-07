@@ -13,7 +13,7 @@ class Nav extends React.Component{
   render(){
     return(
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper blue">
           <SideNavButton />
           <ul className="right hide-on-med-and-down">
             {this.state.links.map(link =>{
