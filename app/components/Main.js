@@ -17,8 +17,8 @@ const mockData = [{
   desc: 'This is a Mock Description'
 }];
 class Main extends React.Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {};
   }
   componentWillMount(){

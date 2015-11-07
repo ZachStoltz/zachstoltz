@@ -2,7 +2,7 @@ import React from 'react';
 
 const wrapperStyles = {
   display: 'inline-block',
-  marginRight: '10'
+  marginRight: '1.5rem'
 };
 class MediaLink extends React.Component{
   render(){
