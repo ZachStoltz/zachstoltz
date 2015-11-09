@@ -9,7 +9,7 @@ class MediaLink extends React.Component{
     return (
       <div style={wrapperStyles}>
         <a href={this.props.href}>
-          <i className={this.props.className ? 'fa fa-'+ this.props.className : ''}></i>
+          <i className={this.props.className ? 'scale-animation fa fa-'+ this.props.className : ''}></i>
         </a>
       </div>
     );

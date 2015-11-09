@@ -1,3 +1,26 @@
 .fa {
   font-size: 30px;
 }
+
+.scale-animation{
+  animation-name: iconScale;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.scale-animation:hover {
+  animation-play-state:running;
+}
+
+@keystroke iconScale{
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.5);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
