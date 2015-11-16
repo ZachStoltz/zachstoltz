@@ -1,5 +1,5 @@
 import React from 'react';
-import MediaLink from './MediaLink';
+import MediaLink from './MediaLink.jsx';
 
 const socialLinks = [
   {name: 'GitHub', href: 'https://github.com/zachstoltz',className:'github'},
@@ -8,7 +8,7 @@ const socialLinks = [
 ];
 
 
-class SocialMedia extends React.Component{
+export default class SocialMedia extends React.Component{
   constructor(props){
     super(props);
     this.state = {socialLinks: socialLinks};
@@ -30,4 +30,3 @@ class SocialMedia extends React.Component{
 SocialMedia.propTypes = {
   socialLinks : React.PropTypes.array
 };
-export default SocialMedia;

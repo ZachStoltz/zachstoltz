@@ -1,12 +1,12 @@
 module.exports = {
-  entry: './app/components/Main.js',
+  entry: './app/components/Main.jsx',
   output: {
-    filename: 'public/app-compiled.js'
+    filename: 'dist/app-compiled.js'
   },
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules |bower_components)/,
         loader: 'babel'
       }

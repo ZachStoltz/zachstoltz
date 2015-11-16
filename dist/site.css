@@ -10,7 +10,9 @@
 }
 
 .scale-animation:hover {
-  animation-play-state:running;
+  transform:scale(1);
+  color: red;
+  /*animation-play-state:running;*/
 }
 
 @keystroke iconScale{

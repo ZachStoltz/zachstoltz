@@ -1,11 +1,13 @@
 import React from 'react';
-import SideNavButton from './SideNavButton';
-import NavItem from './NavItem';
+import SideNavButton from './SideNavButton.jsx';
+import NavItem from './NavItem.jsx';
 
-const LINKS = [{name: 'Home', href: '#', id: 0},
-  {name: 'About', href: '#', id: 1},{name: 'Hacklings', href: '#', id: 2}];
+const LINKS = [
+  {name: 'About', href: '#about', id: 1},
+  {name: 'Hacklings', href: '#projects', id: 2}
+];
 
-class Nav extends React.Component{
+export default class Nav extends React.Component{
   constructor(props){
     super(props);
     this.state = {links:LINKS};
@@ -18,14 +20,14 @@ class Nav extends React.Component{
           <ul className="right hide-on-med-and-down">
             {this.state.links.map(link =>{
               return (
-                <NavItem key={link.id} {... link} />
+                <NavItem isSideNav={false} key={link.id} {... link} />
               );
             })}
           </ul>
           <ul className="side-nav" id="mobile-nav">
             {this.state.links.map(link =>{
               return (
-                <NavItem key={link.id} {... link} />
+                <NavItem isSideNav={true} key={link.id} {... link} />
               );
             })}
           </ul>
@@ -34,4 +36,3 @@ class Nav extends React.Component{
     );
   }
 }
-export default Nav;
