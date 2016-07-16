@@ -12,7 +12,7 @@
     "start": "cross-env NODE_ENV=production node index.js",
     "build": "cross-env NODE_ENV=production webpack",
     "build:dev": "cross-env NODE_ENV=development webpack",
-    "prestart":"cross-env NODE_ENV=production webpack"
+    "postinstall": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,6 @@
   "homepage": "https://github.com/ZachStoltz/ZachStoltz.github.io",
   "dependencies": {
     "axios": "^0.13.0",
-    "body-parser": "^1.15.2",
-    "css-loader": "^0.23.1",
     "easy-zip2": "^1.0.0",
     "express": "^4.14.0",
     "express-formidable": "^0.1.3",
@@ -40,9 +38,8 @@
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "rimraf": "^2.5.3",
-    "sass-loader": "^4.0.0",
-    "serve-static": "^1.11.1",
-    "style-loader": "^0.13.1"
+
+
   },
   "devDependencies": {
     "babel-core": "^6.0.20",
@@ -52,6 +49,8 @@
     "babel-preset-react": "^6.0.15",
     "babel-preset-stage-0": "^6.0.15",
     "babel-register": "^6.9.0",
+    "body-parser": "^1.15.2",
+    "css-loader": "^0.23.1",
     "cross-env": "^2.0.0",
     "eslint": "^3.0.1",
     "eslint-config-airbnb": "^9.0.1",
@@ -62,6 +61,9 @@
     "path": "^0.12.7",
     "react-hot-loader": "^1.3.0",
     "redux-logger": "^2.6.1",
+    "sass-loader": "^4.0.0",
+    "serve-static": "^1.11.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.12.1"
   }

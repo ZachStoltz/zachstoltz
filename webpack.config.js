@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 if (process.env.NODE_ENV === 'production') {
   plugins = [new webpack.optimize.UglifyJsPlugin({
+    minimize: true,
     compress: { warnings: false },
   })].concat(plugins);
 }
