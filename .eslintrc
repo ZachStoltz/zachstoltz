@@ -1,38 +1,18 @@
 {
-    "rules": {
-        "no-undef": 0,
-        no-unused-vars: 1,
-        "indent": [
-            2,
-            2
-        ],
-        "quotes": [
-            2,
-            "single"
-        ],
-        "linebreak-style": [
-            2,
-            "unix"
-        ],
-        "semi": [
-            2,
-            "always"
-        ],
-        "react/no-multi-comp": 1,
-        "react/prefer-es6-class": 1,
-        "react/prop-types": 1
-    },
-    "env": {
-        "es6": true,
-        "browser": true
-    },
-    "extends": "eslint:recommended",
-    "ecmaFeatures": {
-        "modules": true,
-        "jsx": true,
-        "experimentalObjectRestSpread": true
-    },
-    "plugins": [
-        "react"
-    ]
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "sort-imports": [2, {
+      "ignoreCase": true,
+      "memberSyntaxSortOrder": [
+        "none",
+        "all",
+        "single",
+        "multiple"
+      ]
+    }],
+    "arrow-body-style": [0, "as-needed"],
+    "no-console": [0],
+    "max-len": [2, {"code": 130, "tabWidth": 2}]
+  }
 }

@@ -1,27 +1,34 @@
-import React from 'react';
-import CircleImg from '../CircleImg.jsx';
+import Avatar from 'material-ui/Avatar';
 import helpers from '../../utils/helpers';
 import SocialMedia from './socialMedia/SocialMedia.jsx';
+import React, { Component } from 'react';
 
 const jumbotron = {
-  padding: '10',
-  backgroundColor: 'lightgray'
+  padding: '10px',
+  backgroundColor: 'lightgray',
+  display: 'flex',
+  flex: '1',
+  flexDirection: 'column',
 };
-export default class Jumbotron extends React.Component{
-  constructor(props){
+export default class Jumbotron extends Component {
+  constructor(props) {
     super(props);
-    this.state = {imgUrl: ''};
+    this.state = { imgUrl: '' };
   }
-  componentDidMount(){
-    helpers.getUserProfile().then(data =>{
-      this.setState({imgUrl: data.data.avatar_url});
+  componentDidMount() {
+    helpers.getUserProfile().then(data => {
+      this.setState({ imgUrl: data.data.avatar_url });
     });
   }
-  render(){
+  render() {
     return (
-      <div className="center-align" style={jumbotron}>
-        <CircleImg src={this.state.imgUrl} />
-        <h1 style={{marginTop: '0px'}}>Zachary Stoltz</h1>
+      <div style={jumbotron}>
+        <Avatar
+          style={{ alignSelf: 'center' }}
+          src={this.state.imgUrl}
+          size={200}
+        />
+        <h1 style={{ margin: '0px', alignSelf: 'center' }}>Zachary Stoltz</h1>
         <SocialMedia />
       </div>
     );

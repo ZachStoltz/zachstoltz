@@ -1,32 +1,28 @@
+import Github from './Github.jsx';
+import Linkedin from './Linkedin.jsx';
 import React from 'react';
-import MediaLink from './MediaLink.jsx';
+import Twitter from './Twitter.jsx';
 
-const socialLinks = [
-  {name: 'GitHub', href: 'https://github.com/zachstoltz',className:'github'},
-  {name: 'twitter', href: 'https://twitter.com/ZachStoltz', className: 'twitter'},
-  {name: 'linkedin', href: 'https://www.linkedin.com/in/zacharystoltz', className: 'linkedin'}
-];
-
-
-export default class SocialMedia extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {socialLinks: socialLinks};
-  }
-  render(){
-    return(
-      <div>
-        {
-          this.state.socialLinks.map((link, idx) => {
-            return(
-              <MediaLink key={idx} {...link} />
-            );
-          })
-        }
-      </div>
-    );
-  }
-}
-SocialMedia.propTypes = {
-  socialLinks : React.PropTypes.array
+const styles = {
+  svgSize: {
+    width: '54px',
+    height: '54px',
+  },
+  mediaContainer: {
+    alignSelf: 'center',
+  },
 };
+
+export default () => (
+  <div style={styles.mediaContainer}>
+    <a href="https://github.com/zachstoltz" target="_blank">
+      <Github viewBox="0 0 512 512" style={styles.svgSize} />
+    </a>
+    <a href="https://www.linkedin.com/in/zacharystoltz" target="_blank">
+      <Linkedin viewBox="0 0 512 512" style={styles.svgSize} />
+    </a>
+    <a href="https://twitter.com/ZachStoltz" target="_blank">
+      <Twitter viewBox="0 0 512 512" style={styles.svgSize} />
+    </a>
+  </div>
+);
