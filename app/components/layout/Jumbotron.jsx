@@ -1,4 +1,4 @@
-import Avatar from 'material-ui/Avatar';
+import Avatar from '../../../node_modules/material-ui/Avatar';
 import helpers from '../../utils/helpers';
 import SocialMedia from './socialMedia/SocialMedia.jsx';
 import React, { Component } from 'react';
