@@ -19,11 +19,11 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(process.env.PORT || 7001, 'localhost', (err) => {
+app.listen(process.env.PORT || 7001, (err) => {
   if (err) {
     console.log(err);
   }
-  console.log('Express App listening @ port 7001');
+  console.log(`Express App listening @ port ${process.env.PORT || 7001}`);
 });
 
 app.post('/upload', (req, res) => {
