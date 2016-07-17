@@ -11,8 +11,7 @@
     "start:dev": "cross-env NODE_ENV=development nodemon index.js",
     "start": "npm run build && cross-env NODE_ENV=production node index.js",
     "build": "cross-env NODE_ENV=production webpack",
-    "build:dev": "cross-env NODE_ENV=development webpack",
-    "postinstall": "node_modules/.bin/webpack"
+    "build:dev": "cross-env NODE_ENV=development webpack"
   },
   "repository": {
     "type": "git",
