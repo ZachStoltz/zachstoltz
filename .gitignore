@@ -3,3 +3,5 @@ node_modules
 typings
 .settings
 .idea
+bundle.js
+bundle.js.map
