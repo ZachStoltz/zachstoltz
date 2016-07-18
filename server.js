@@ -35,10 +35,7 @@ app.post('/upload', (req, res) => {
   _.each(files, (file) => {
     const buffer = fs.readFileSync(file.path);
     const newPath = path.join(__dirname, `/uploads/${file.name}`);
-    fs.writeFile(newPath, buffer, (err) => {
-      if (err) console.log(err);
-    });
-    return res.status(200);
+    fs.writeFileSync(newPath, buffer);
   });
 
   const zip = new EasyZip();
