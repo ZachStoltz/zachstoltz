@@ -18,9 +18,7 @@ export default class Lula extends Component {
       formData.append('files', file);
     });
     axios.post('/upload', formData).then(() => {
-      setTimeout(() => {
-        download.click();
-      }, 300);
+      download.click();
     });
   }
   triggerFileUploadDialog() {
@@ -29,7 +27,7 @@ export default class Lula extends Component {
   }
 
   toggleSubmit() {
-    const { submit, uploader } = this.refs;
+    const { uploader } = this.refs;
 
     if (uploader.files) {
       this.setState({

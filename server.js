@@ -40,10 +40,9 @@ app.post('/upload', (req, res) => {
 
   const zip = new EasyZip();
   zip.zipFolder('./uploads', () => {
-    zip.writeToFile('uploads.zip');
+    zip.writeToFileSync('uploads.zip');
+    res.status(200).send('Success');
   });
-
-  res.status(200).send('Success');
 });
 
 app.get('/download', (req, res) => {
