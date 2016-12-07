@@ -10,8 +10,10 @@ import { Provider } from 'react-redux';
 import React from 'react';
 import { render } from 'react-dom';
 import { IndexRoute, Route, Router } from 'react-router';
-
 import store, { history } from './store';
+
+const injectTapEventPlugin = require('react-tap-event-plugin');
+injectTapEventPlugin();
 
 const router = (
   <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>

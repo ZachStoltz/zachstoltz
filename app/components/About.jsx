@@ -1,5 +1,5 @@
-import React from 'react';
 import InfoBox from './InfoBox.jsx';
+import React from 'react';
 
 const aboutStylings = {
   margin: '0 5em'
