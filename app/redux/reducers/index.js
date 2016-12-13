@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import testReducer from './testReducer';
 import { routerReducer as routing } from 'react-router-redux';
+import testReducer from './testReducer';
+
 const rootReducer = combineReducers({
   testReducer,
   // Added to support history in redux for React Router

@@ -8,12 +8,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "cross-env NODE_ENV=development nodemon index.js",
-    "start": "npm run build && cross-env NODE_ENV=production node index.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon server.js",
+    "start": "npm run build && cross-env NODE_ENV=production node server.js",
     "build": "cross-env NODE_ENV=production webpack",
     "build:dev": "cross-env NODE_ENV=development webpack",
     "postinstall": "npm run build",
-    "forever": "npm run build && cross-env NODE_ENV=production forever start -d index.js"
+    "forever": "npm run build && cross-env NODE_ENV=production forever start -d server.js"
   },
   "repository": {
     "type": "git",
