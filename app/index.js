@@ -2,28 +2,24 @@ import '../dist/site.scss';
 import '../dist/normalize.scss';
 
 import App from './components/App.jsx';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import BaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Main from './components/Main.jsx';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { Provider } from 'react-redux';
 import React from 'react';
 import { render } from 'react-dom';
-import { IndexRoute, Route, Router } from 'react-router';
-import store, { history } from './store';
+import { IndexRoute, Route, Router, browserHistory } from 'react-router';
 
 const injectTapEventPlugin = require('react-tap-event-plugin');
 injectTapEventPlugin();
 
 const router = (
-  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-    <Provider store={store}>
-      <Router history={history}>
-        <Route path="/" component={App}>
-          <IndexRoute component={Main} />
-        </Route>
-      </Router>
-    </Provider>
+  <MuiThemeProvider muiTheme={getMuiTheme(BaseTheme)}>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Main} />
+      </Route>
+    </Router>
   </MuiThemeProvider>
 );
 

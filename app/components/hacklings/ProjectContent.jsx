@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-export default class ProjectContent extends React.Component{
-  render(){
-    return(
-      <div className="card-content">
-        <span className="card-title grey-text">{this.props.name}</span>
-        <div className="divider"></div>
-        <p>{this.props.description}</p>
-      </div>
-    );
-  }
-}
-ProjectContent.propTypes = {
-  name: React.PropTypes.string,
-  description: React.PropTypes.string
+export const formatLanguage = (lang) => {
+  if (lang === undefined || lang === null) return undefined;
+
+  return (
+    <span className={`lang lang-${lang.toLowerCase()}`}>
+      {lang === 'JavaScript' ? 'JS' : lang}
+    </span>
+  );
 };
+
+export const ProjectContent = (props) => (
+  <div className="repo--content">
+    <div className="repo--content-header">
+      <h2 className="heading">{props.name}</h2>
+      {formatLanguage(props.language)}
+    </div>
+    <p>{props.description}</p>
+  </div>
+);
+
+ProjectContent.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+};
+
+export default ProjectContent;

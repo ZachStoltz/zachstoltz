@@ -28,7 +28,7 @@ export default class Jumbotron extends Component {
           src={this.state.imgUrl}
           size={200}
         />
-        <h1 style={{ margin: '0px', alignSelf: 'center' }}>Zachary Stoltz</h1>
+        <h1 className="jumbotron--headline"><span className="blue">Zachary</span>Stoltz</h1>
         <SocialMedia />
       </div>
     );
