@@ -4,9 +4,10 @@ import React from 'react';
 import Twitter from './Twitter.jsx';
 
 const styles = {
-  svgSize: {
+  svg: {
     width: '54px',
     height: '54px',
+    color: 'white',
   },
   mediaContainer: {
     alignSelf: 'center',
@@ -16,13 +17,13 @@ const styles = {
 export default () => (
   <div style={styles.mediaContainer}>
     <a href="https://github.com/zachstoltz" target="_blank">
-      <Github viewBox="0 0 512 512" style={styles.svgSize} />
+      <Github viewBox="0 0 512 512" style={styles.svg} />
     </a>
     <a href="https://www.linkedin.com/in/zacharystoltz" target="_blank">
-      <Linkedin viewBox="0 0 512 512" style={styles.svgSize} />
+      <Linkedin viewBox="0 0 512 512" style={styles.svg} />
     </a>
     <a href="https://twitter.com/ZachStoltz" target="_blank">
-      <Twitter viewBox="0 0 512 512" style={styles.svgSize} />
+      <Twitter viewBox="0 0 512 512" style={styles.svg} />
     </a>
   </div>
 );

@@ -4,11 +4,21 @@
 .blue {
   color: #438eff;
 }
+.jumbotron {
+  padding: 10px;
+  background: no-repeat url('./img/stars.jpg');
+  background-position: 59% 59%;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}
 .jumbotron--headline {
   margin: 0;
   align-self: center;
   font-size: 3rem;
+  color: white;
 }
+
 .about, .hacklings {
   max-width: 95%;
   margin: 0 auto;
@@ -26,6 +36,10 @@
   display: flex;
   flex-flow: row wrap;
   flex: 1;
+}
+.repo--link {
+  text-decoration: none;
+  color: inherit;
 }
 .repo--container {
   flex: 1 1 45%;

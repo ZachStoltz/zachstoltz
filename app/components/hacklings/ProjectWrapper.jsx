@@ -10,7 +10,13 @@ export const ProjectWrapper = (props) => {
       className="repo--container"
       rounded
     >
-      <ProjectContent {...project} />
+      <a
+        className="repo--link"
+        href={project.html_url}
+        target="_blank"
+      >
+        <ProjectContent {...project} />
+      </a>
     </Paper>
   );
 };

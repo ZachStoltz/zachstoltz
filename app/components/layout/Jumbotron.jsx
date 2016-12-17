@@ -3,13 +3,6 @@ import helpers from '../../utils/helpers';
 import SocialMedia from './socialMedia/SocialMedia.jsx';
 import React, { Component } from 'react';
 
-const jumbotron = {
-  padding: '10px',
-  backgroundColor: 'lightgray',
-  display: 'flex',
-  flex: '1',
-  flexDirection: 'column',
-};
 export default class Jumbotron extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +15,7 @@ export default class Jumbotron extends Component {
   }
   render() {
     return (
-      <div style={jumbotron}>
+      <div className="jumbotron">
         <Avatar
           style={{ alignSelf: 'center' }}
           src={this.state.imgUrl}

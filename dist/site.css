@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box; }
+
+.blue {
+  color: #438eff; }
+
+.jumbotron {
+  padding: 10px;
+  background: no-repeat url("./img/stars.jpg");
+  background-position: 59% 59%;
+  display: flex;
+  flex: 1;
+  flex-flow: column; }
+
+.jumbotron--headline {
+  margin: 0;
+  align-self: center;
+  font-size: 3rem;
+  color: white; }
+
+.about, .hacklings {
+  max-width: 95%;
+  margin: 0 auto; }
+  .about h1, .hacklings h1 {
+    margin: 1rem; }
+
+.about .info {
+  margin: 1rem;
+  line-height: 1.8rem;
+  font-size: 1.07rem; }
+
+.repos {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1; }
+
+.repo--link {
+  text-decoration: none;
+  color: inherit; }
+
+.repo--container {
+  flex: 1 1 45%;
+  max-height: 10rem;
+  margin: 1rem;
+  background: #dbf1ff !important;
+  border-radius: .6rem !important; }
+
+.repo--content-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.repo--content {
+  padding: 1rem; }
+  .repo--content .heading {
+    color: #615f5f;
+    margin: 0; }
+  .repo--content .lang {
+    font-size: .7rem;
+    font-weight: 600;
+    border: 0.01rem solid rgba(0, 0, 0, 0.28);
+    border-radius: .2rem;
+    padding: .2rem .5rem; }
+  .repo--content .lang-html {
+    background: #e44b23;
+    color: white; }
+  .repo--content .lang-javascript {
+    background: #f1e05a; }
+  .repo--content .lang-css {
+    background: #563d7c;
+    color: white; }
+  .repo--content .lang-c\# {
+    background: #178600;
+    color: white; }
+  .repo--content .lang-objective-c {
+    background: #438eff;
+    color: white; }

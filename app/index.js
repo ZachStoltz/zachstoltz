@@ -1,6 +1,3 @@
-import '../dist/site.scss';
-import '../dist/normalize.scss';
-
 import App from './components/App.jsx';
 import BaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';

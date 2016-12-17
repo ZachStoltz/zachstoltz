@@ -13,6 +13,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "build:dev": "cross-env NODE_ENV=development webpack",
     "postinstall": "npm run build",
+    "build-css": "node-sass --include-path -w app/style/site.scss dist/site.css",
     "forever": "npm run build && cross-env NODE_ENV=production forever start -d server.js"
   },
   "repository": {

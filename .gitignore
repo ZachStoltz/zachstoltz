@@ -4,3 +4,4 @@ node_modules
 typings
 .settings
 .idea
+npm-debug.log
