@@ -20,7 +20,7 @@ export default class Hacklings extends Component {
     const { projects } = this.state;
     return (
       <div id="projects" className="hacklings">
-        <h1>Hacklings</h1>
+        <h1 className="header">Hacklings</h1>
         <div className="repos">
           {projects
             ? projects.map(project => (

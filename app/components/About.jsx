@@ -3,7 +3,7 @@ import React from 'react';
 
 export default () => (
   <div className="about">
-    <h1>About</h1>
+    <h1 className="header">About</h1>
     <InfoBox />
   </div>
 );

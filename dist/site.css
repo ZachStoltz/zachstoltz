@@ -21,8 +21,17 @@
 .about, .hacklings {
   max-width: 95%;
   margin: 0 auto; }
-  .about h1, .hacklings h1 {
-    margin: 1rem; }
+  .about .header, .hacklings .header {
+    margin: 1rem;
+    text-align: center; }
+    .about .header:after, .hacklings .header:after {
+      content: "";
+      background: #438eff;
+      width: 100%;
+      height: .12rem;
+      max-width: 3rem;
+      display: block;
+      margin: 0 auto; }
 
 .about .info {
   margin: 1rem;
@@ -42,7 +51,7 @@
   flex: 1 1 45%;
   max-height: 10rem;
   margin: 1rem;
-  background: #dbf1ff !important;
+  background: #f1f1f1 !important;
   border-radius: .6rem !important; }
 
 .repo--content-header {
