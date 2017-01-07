@@ -58,6 +58,7 @@
     margin: 0; }
   .repo--content .lang {
     font-size: .7rem;
+    line-height: .7rem;
     font-weight: 600;
     border: 0.01rem solid rgba(0, 0, 0, 0.28);
     border-radius: .2rem;
