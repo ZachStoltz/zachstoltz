@@ -10,7 +10,6 @@ export default class Hacklings extends Component {
   componentDidMount() {
     helpers.getRepos().then(data => {
       const repos = data.data;
-      console.log(repos);
       this.setState({ projects: repos });
     })
     .catch(err => this.setState({ err }));
