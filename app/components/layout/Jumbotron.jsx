@@ -22,7 +22,7 @@ export default class Jumbotron extends Component {
           size={200}
         />
         <h1 className="jumbotron--headline"><span className="blue">Zachary</span>Stoltz</h1>
-        <SocialMedia />
+        <SocialMedia className="social" />
       </div>
     );
   }

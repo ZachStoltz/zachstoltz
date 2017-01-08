@@ -14,15 +14,15 @@ const styles = {
   },
 };
 
-export default () => (
+export default (props) => (
   <div style={styles.mediaContainer}>
-    <a href="https://github.com/zachstoltz" target="_blank">
+    <a href="https://github.com/zachstoltz" target="_blank" className={props.className}>
       <Github viewBox="0 0 512 512" style={styles.svg} />
     </a>
-    <a href="https://www.linkedin.com/in/zacharystoltz" target="_blank">
+    <a href="https://www.linkedin.com/in/zacharystoltz" target="_blank" className={props.className}>
       <Linkedin viewBox="0 0 512 512" style={styles.svg} />
     </a>
-    <a href="https://twitter.com/ZachStoltz" target="_blank">
+    <a href="https://twitter.com/ZachStoltz" target="_blank" className={props.className}>
       <Twitter viewBox="0 0 512 512" style={styles.svg} />
     </a>
   </div>

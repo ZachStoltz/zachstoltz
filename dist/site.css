@@ -86,3 +86,23 @@
   .repo--content .lang-objective-c {
     background: #438eff;
     color: white; }
+
+/* Link Animation */
+.social > svg:hover {
+  animation: throwItInACircle 2s infinite;
+  animation-timing-function: cubic-bezier(0.27, -0.93, 0.4, 1.06); }
+
+@keyframes throwItInACircle {
+  0% {
+    transform: rotate(0deg) scale(1);
+    color: #e5e3fb; }
+  15% {
+    color: #fabafd; }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+    color: #438eff; }
+  75% {
+    color: #fabafd; }
+  100% {
+    transform: scale(1);
+    color: #e5e3fb; } }
